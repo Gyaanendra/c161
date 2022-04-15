@@ -3,13 +3,13 @@ AFRAME.registerComponent("bullets", {
     this.shootBullet();
   },
   shootBullet: function () {
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "z") {
+    window.addEventListener("click", (e) => {
+      //if (e.key === "") {
         var bullet = document.createElement("a-entity");
 
         bullet.setAttribute("geometry", {
           primitive: "sphere",
-          radius: 0.1,
+          radius: 0.05,
         });
 
         bullet.setAttribute("material", "color", "black");
@@ -36,7 +36,7 @@ AFRAME.registerComponent("bullets", {
         var scene = document.querySelector("#scene");
 
         scene.appendChild(bullet);
-      }
+      //}
     });
   },
 });
